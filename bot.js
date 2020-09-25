@@ -21,17 +21,19 @@ client.on("message", (message) => {
 
   if (message.author.id == "702224385276379286") {
     //console.log(message.embeds)
-    if (message.embeds[0].title.includes("Reklama")) {
-      const flyEmoji = client.emojis.cache.get('759055960323915837')
-      message.delete();
-      console.log("Zablokowano!") /* <:admlogo:759055960323915837>*/
-      if (deeta.readTableZSDB("serw.txt").includes(message.guild.id)) {
-        //nic
-      } else {
-        message.channel.send(` ${flyEmoji} Zablokowano reklamę!`)
+    if (message.embeds[0].title){
+      if (message.embeds[0].title.includes("Reklama")) {
+        const flyEmoji = client.emojis.cache.get('759055960323915837')
+        message.delete();
+        console.log("Zablokowano!") /* <:admlogo:759055960323915837>*/
+        if (deeta.readTableZSDB("serw.txt").includes(message.guild.id)) {
+          //nic
+        } else {
+          message.channel.send(` ${flyEmoji} Zablokowano reklamę!`)
+        }
+        zablokowane++;
+        client.user.setActivity(`${zablokowane} zablokowanych reklam w tej sesji! - ${client.guilds.cache.size} serwerów`);
       }
-      zablokowane++;
-      client.user.setActivity(`${zablokowane} zablokowanych reklam w tej sesji! - ${client.guilds.cache.size} serwerów`);
     }
   }
   const args = message.content.slice(prefix.length).trim().split(/ +/);
