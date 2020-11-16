@@ -1,4 +1,4 @@
 # adblock-minus
-Adblock dla bota "Boomfinity"
-<br>Ten bot automatycznie usuwa reklamy w bocie "Boomfinity"
-<br>Dodaj bota na swój serwer: https://discord.com/oauth2/authorize?client_id=689173316530864147&scope=bot&permissions=76800
+Adblock dla bota "Boomfinity"<br>
+Obecnie to repo jest puste, jednak prace nad nową wersją adblocka zostały rozpoczęte<br>
+Stara wersja jest w branchu bot-dsc-legacy
