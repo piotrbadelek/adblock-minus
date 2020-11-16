@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Adblock Minus",
+    "version": "1.0",
+    "description": "Blokuje reklamy w panelu boomfinity",
+    "icons": {
+        "48": "adblockminus.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.boomfinity.xyz/*"
+            ],
+            "js": [
+                "adm.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "webNavigation",
+        "activeTab"
+    ]
+}
